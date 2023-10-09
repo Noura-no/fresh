@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh-Home</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="fresh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"
+        href="data:image/jpeg;base64,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">
+</head>
+
+<body>
+    <a href="#"><button><i style="font-size:24px" class="fa">&#xf102;</i></button></a>
+
+    <!-- <section class="section"> -->
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#">
+                        <img src="OIP__1_-removebg-preview (1).png" width="200" height="10">
+                    </a>
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item">
+                            Features
+                        </a>
+
+                        <a class="navbar-item">
+                            Pricing
+                        </a>
+                        <a class="navbar-item">
+                            Log in
+                        </a>
+                        <div class="buttons">
+                            <a class="button is-info">
+                                <strong>Sign up</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </nav>
+    </section>
+
+    <section class="hero section is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered is-vcentered ">
+                    <div class="column is-5">
+                        <div class="content">
+                            <h1 class="title has-text-info-dark">Manage and deploy your apps seamlessly.</h1>
+                        </div>
+                        <div class="content">
+                            <p class="subtitle">Lorem ipsum sit dolor amet is a dummy text used by typography industry
+                            </p>
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-info is-rounded">Get Started</button>
+                            <button class="button is-rounded">Discover</button>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <img src="https://fresh.cssninja.io/img/illustrations/worker.svg" alt="">
+                    </div>
+                </div>
+                <div class="hero-foot">
+                    <nav class="tabs is-centered">
+                        <div class="container">
+                            <ul>
+                                <li class="is-active">
+                                    <a><img src="https://fresh.cssninja.io/img/logo/clients/systek.svg" width="100"></a>
+                                </li>
+                                <li><a><img src="https://fresh.cssninja.io/img/logo/clients/tribe.svg" width="100"
+                                            alt=""></a></li>
+                                <li><a><img src="https://fresh.cssninja.io/img/logo/clients/kromo.svg" width="100"
+                                            alt=""></a></li>
+                                <li><a><img src="https://fresh.cssninja.io/img/logo/clients/infinite.svg" width="100"
+                                            alt=""></a></li>
+                                <li><a><img src="https://fresh.cssninja.io/img/logo/clients/gutwork.svg" width="100"
+                                            alt=""></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+    </section>
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title has-text-info">Great Power Comes</h1>
+            <p class="subtitle">With great Responsability</p>
+            <hr>
+        </div>
+        <section class="section">
+            <div class="columns is-centered is-vcentered">
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title is-centered has-text-info-dark">
+                            App builder
+                        </div>
+                        <div class="card-image has-text-centered">
+                            <img src="https://fresh.cssninja.io/img/icons/web.svg" width="100" alt="">
+                        </div>
+                        <div class="card-content">
+                            <p>This is some cool explanatory text that is on two rows</p>
+                        </div>
+                        <div class="buttons is-centered">
+                            <button class="button is-info">
+                                Free Trial
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title is-centered has-text-info-dark">
+                            Cloud integration
+                        </div>
+                        <div class="card-image has-text-centered">
+                            <img src="https://fresh.cssninja.io/img/icons/rocket.svg" width="100" alt="">
+                        </div>
+                        <div class="card-content">
+                            <p>This is some explanatory text that is on two rows</p>
+                        </div>
+                        <div class="buttons is-centered">
+                            <button class="button is-info">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title is-centered has-text-info-dark">
+                            Addons & Plugins
+                        </div>
+                        <div class="card-image has-text-centered">
+                            <img src="https://fresh.cssninja.io/img/icons/light-bulb.svg" width="100" alt="">
+                        </div>
+                        <div class="card-content">
+                            <p>This is some explanatory text that is on two rows</p>
+                        </div>
+                        <div class="buttons is-centered">
+                            <button class="button is-info">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="section is-centered">
+        <div class="container has-text-centered">
+            <h1 class="title has-text-info-dark">
+                Awesome Features
+            </h1>
+            <p class="subtitle">To make you super happy</p>
+            <hr>
+        </div>
+
+        <section class="section">
+            <div class="columns is-centered is-vcentered">
+                <div class="column is-5">
+                    <div class="content">
+                        <h1 class="title has-text-info-dark">Connect with people</h1>
+                    </div>
+                    <p class="subtitle has-text-grey-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cum audissem Antiochum, Brute, ut solebam, cum M.
+                        Quae diligentissime contra Aristonem dicuntur a Chryippo.</p>
+                </div>
+                <div class="column is-4">
+                    <img src="https://fresh.cssninja.io/img/illustrations/features/feature-1.png" alt="">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered is-vcentered">
+                <div class="column is-5">
+                    <img src="https://fresh.cssninja.io/img/illustrations/features/feature-2.png" alt="">
+                </div>
+                <div class="column is-5">
+                    <div class="content">
+                        <h1 class="title has-text-info-dark">
+                            Collaborate easily
+                        </h1>
+                    </div>
+                    <p class="subtitle has-text-grey-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum audissem Antiochum,
+                        Brute, ut solebam, cum M. Quae diligentissime contra Aristonem dicuntur a Chryippo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered is-vcentered">
+                <div class="column is-5">
+                    <div class="content">
+                        <h1 class="title has-text-info-dark">
+                            An intuitive app
+                        </h1>
+                    </div>
+                    <p class="subtitle has-text-grey-light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum audissem Antiochum, Brute,
+                        ut solebam, cum M. Quae diligentissime contra Aristonem dicuntur a Chryippo.
+                    </p>
+                </div>
+                <div class="column is-4">
+                    <img src="https://fresh.cssninja.io/img/illustrations/workers.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <h1 class="title has-text-info-dark">
+                Wait, there's more
+            </h1>
+            <p class="subtitle">
+                To make you super happy
+            </p>
+            <hr>
+        </div>
+        <section class="section-svg">
+            <div class="container">
+                <div class="columns is-multiline is-centered is-vcentered">
+                    <div class="column is-3 is-centered is-vcentered">
+                        <a href="#">
+                            <img src="github-color-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Github</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="bitbucket-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Bitbucket</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="slack-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Slack</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="npm-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Npm</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="js-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">JavaScript</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="nodejs-icon-logo-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Nodejs</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="angular-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Angular</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="google-logo-search-new-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Google</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="python-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Python</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="wordpress-color-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">WordPress</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="android-color-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Android</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                    <div class="column is-3">
+                        <a href="#">
+                            <img src="apple-173-svgrepo-com.svg" width="50" alt="">
+                            <h6 style="color: lightskyblue;">Apple</h6>
+                            <p style="color: lightslategray;">Some feature text</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="section-cards">
+        <div class="container has-text-centered">
+            <h1 class="title has-text-info-dark">Our clients love us</h1>
+            <p class="subtitle">Look at what they say about us</p>
+        </div>
+        <section class="section">
+            <div class="columns is-centered is-vcentered">
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title"><i class="fa fa-quote-left fa-2x fa-pull-left fa-border"
+                                style="font-size: 20px; border: none;"></i></div>
+                        <div class="card-content">
+                            <p>Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu,
+                                ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.</p>
+                        </div>
+                        <div class="columns-card">
+                            <div class="card-image">
+                                <img src="https://fresh.cssninja.io/img/illustrations/faces/1.png" width="50" alt="">
+                            </div>
+                            <div class="content">
+                                <h4>Irma Walters</h4>
+                                <p>Accountant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title"><i class="fa fa-quote-left fa-2x fa-pull-left fa-border"
+                                style="font-size: 20px; border: none;"></i></div>
+                        <div class="card-content">
+                            <p>Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te
+                                usu,
+                                ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                            </p>
+                        </div>
+
+                        <div class="columns-card">
+                            <div class="card-image">
+                                <img src="https://fresh.cssninja.io/img/illustrations/faces/2.png" width="50" alt="">
+                            </div>
+                            <div class="content">
+                                <h4>John Bradley</h4>
+                                <p>Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title"><i class="fa fa-quote-left fa-2x fa-pull-left fa-border"
+                                style="font-size: 20px; border: none;"></i></div>
+                        <div class="card-content">
+                            <p>Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te
+                                usu,
+                                ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+                            </p>
+                        </div>
+                        <div class="columns-card">
+                            <div class="card-image">
+                                <img src="https://fresh.cssninja.io/img/illustrations/faces/3.png" width="50" alt="">
+                            </div>
+                            <div class="content">
+                                <h4>Gary Blackman</h4>
+                                <p>HR Manager</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+    </section>
+
+    <section class="section has-text-centered">
+        <h1 class="title has-text-info-dark">Get Started</h1>
+        <p class="subtitle">Choose one of our plans</p>
+        <hr>
+        <section class="section">
+
+            <div class="columns is-centered is-vcentered">
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title is-centered">Starter</div>
+                        <div class="card-image has-text-centered">
+                            <img src="https://fresh.cssninja.io/img/illustrations/pricing/1.svg" width="200" alt="">
+                        </div>
+                        <div class="card-header-title is-centered"><sup>$</sup>0</div>
+                        <p class="-content has-text-centered">per month</p>
+                        <div class="card-content has-text-centered has-text-grey-light">
+                            <p>Sign up, get some awesome features and get started now</p>
+                        </div>
+                        <div class="buttons is-centered is-vcentered">
+                            <button class="button is-rounded has-background-grey-lighter">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title is-centered">Starter</div>
+                        <div class="card-image has-text-centered">
+                            <img src="https://fresh.cssninja.io/img/illustrations/pricing/2.svg" width="200" alt="">
+                        </div>
+                        <div class="card-header-title is-centered"><sup>$</sup>15</div>
+                        <p class="-content has-text-centered">per month</p>
+                        <div class="card-content has-text-centered has-text-grey-light">
+                            <p>Sign up, get some awesome features and get started now</p>
+                        </div>
+                        <div class="buttons is-centered is-vcentered">
+                            <button class="button is-rounded is-info">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="card">
+                        <div class="card-header-title is-centered">Starter</div>
+                        <div class="card-image has-text-centered">
+                            <img src="https://fresh.cssninja.io/img/illustrations/pricing/3.svg" width="200" alt="">
+                        </div>
+                        <div class="card-header-title is-centered"><sup>$</sup>30</div>
+                        <p class="-content has-text-centered">per month</p>
+                        <div class="card-content has-text-centered has-text-grey-light">
+                            <p>Sign up, get some awesome features and get started now</p>
+                        </div>
+                        <div class="buttons is-centered is-vcentered">
+                            <button class="button is-rounded has-background-grey-lighter">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </section>
+
+    <section class="section has-text-centered has-background-white-ter">
+        <h1 class="title has-text-info-dark">Drop us a line or two</h1>
+        <p class="subtitle">We'd love to hear from You</p>
+        <hr>
+
+        <section class="section">
+            <div class="field">
+                <div class="columns is-centered is-vcentered">
+                    <div class="column is-3">
+                        <div class="control is-3">
+                            <input type="text" class="input" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="control">
+                            <input type="text" class="input" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered is-vcentered">
+                    <div class="column is-3">
+                        <div class="control is-3">
+                            <input type="email" class="input" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="control">
+                            <input type="text" class="input" placeholder="Company">
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered is-vcentered">
+                    <div class="column is-6">
+                        <textarea name="" id="" cols="30" rows="5" class="textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-vcentered is-centered">
+                <div class="column is-6">
+                    <div class="buttons is-right">
+                        <button class="button is-info is-rounded">Send Massege</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <section class="section-footer">
+        <div class="columns is-centered is-vcentered">
+            <div class="column ">
+                <img src="OIP__1_-removebg-preview (1).png"  alt="">
+            </div>
+            <div class="column is-2">
+                <h1 class="title has-text-info-dark">
+                    PRODUCT</h1>
+                <a href="#">Discover Features</a>
+                <a href="#">Why chose our product?</a>
+                <a href="#">Compare features</a>
+                <a href="#">Our Roudmap</a>
+                <a href="#">Request Features</a>
+            </div>
+            <div class="column is-2">
+                <h1 class="title has-text-info-dark">
+                    DOC</h1>
+                <a href="#">Get Started</a>
+                <a href="#">User Guides</a>
+                <a href="#">Admin guide</a>
+                <a href="#">Developer</a>
+
+            </div>
+            <div class="column is-2">
+                <h1 class="title has-text-info-dark">
+                    BlogRoll</h1>
+                <a href="#">Latest News</a>
+                <a href="#">Teach Article</a>
+                <a href="#">Video Blog</a>
+
+            </div>
+            <div class="column is-2">
+                <h1 class="title has-text-info-dark">
+                    Follow Us</h1>
+                <a href="#"><img src="https://img.icons8.com/?size=30&id=118466&format=png" alt=""></a>
+                <a href="#"><img src="https://img.icons8.com/?size=30&id=98960&format=png" alt=""></a>
+                <a href="#"><img src="https://img.icons8.com/?size=30&id=62856&format=png" alt=""></a><br>
+                <a href="#">made with</a>
+                <a href="#"><img src="https://bulma.io/images/bulma-logo.png" width="70 " alt=""></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
